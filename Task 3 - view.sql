@@ -1,0 +1,2 @@
+create view active_customer as  select c.customer_id , c.customer_name , c.contact_number, o.Total_amount, o.order_id  from customers c
+join orders o on c.customer_id = o.customer_id  where o.order_date >= current_date - interval '1 year'
